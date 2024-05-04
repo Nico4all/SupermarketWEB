@@ -15,6 +15,6 @@ namespace SupermarketWEB.Models
 
         public Category Category { get; set; }
 
-        public ICollection<Detail> Details { get; set; }
+        public ICollection<Detail>? Details { get; set; } = default;
     }
 }
