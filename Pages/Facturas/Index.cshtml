@@ -1,0 +1,27 @@
+﻿@page
+@model SupermarketWEB.Pages.Facturas.IndexModel
+@{
+    ViewData["Title"] = "Index Invoices";
+}
+<h1>Index Invoices</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Invoices[0].Number)</th>
+            <th>@Html.DisplayNameFor(model => model.Invoices[0].Date)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Invoices)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Number)</td>
+                <td>@Html.DisplayFor(modelItem => item.Date)</td>
+                <td>
+                    <span></span>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
