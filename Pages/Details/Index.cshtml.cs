@@ -17,12 +17,9 @@ namespace SupermarketWEB.Pages.Details
 
         public List<Detail> Details { get; set; } = default!;
 
-        public async Task OnGet()
+        public async Task OnGetAsync()
         {
-            if (_context.Details != null)
-            {
-                Details = await _context.Details.ToListAsync();
-            }
+            Details = await _context.Details.ToListAsync();
         }
     }
 }

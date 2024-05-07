@@ -17,12 +17,9 @@ namespace SupermarketWEB.Pages.Facturas
 
         public List<Invoice> Invoices { get; set; } = default!;
 
-        public async Task OnGet()
+        public async Task OnGetAsync()
         {
-            if (_context.Invoices != null)
-            {
-                Invoices = await _context.Invoices.ToListAsync();
-            }
+            Invoices = await _context.Invoices.ToListAsync();
         }
     }
 }

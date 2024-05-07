@@ -19,10 +19,7 @@ namespace SupermarketWEB.Pages.Categories
 
         public async Task OnGetAsync()
         {
-            //if (_context.Categories != null)
-            //{
                 Categories = await _context.Categories.ToListAsync();
-            //}
         }
     }
 }

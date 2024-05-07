@@ -17,12 +17,9 @@ namespace SupermarketWEB.Pages.Products
 
         public List<Product> Products { get; set; } = default!;
 
-        public async Task OnGet()
+        public async Task OnGetAsync()
         {
-            if (_context.Products != null)
-            {
-                Products = await _context.Products.ToListAsync();
-            }
+            Products = await _context.Products.ToListAsync();
         }
     }
 }

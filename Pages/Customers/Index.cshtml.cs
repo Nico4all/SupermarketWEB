@@ -17,12 +17,9 @@ namespace SupermarketWEB.Pages.Customers
 
         public List<Customer> Customers { get; set; } = default!;
 
-        public async Task OnGet()
+        public async Task OnGetAsync()
         {
-            if (_context.Customers != null)
-            {
-                Customers = await _context.Customers.ToListAsync();
-            }
+            Customers = await _context.Customers.ToListAsync();
         }
     }
 }
