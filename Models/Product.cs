@@ -13,7 +13,7 @@ namespace SupermarketWEB.Models
         public int CategoryId { get; set; }
 
 
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
 
         public ICollection<Detail>? Details { get; set; } = default;
     }

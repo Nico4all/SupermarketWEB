@@ -17,12 +17,12 @@ namespace SupermarketWEB.Pages.Categories
 
         public List<Category> Categories { get; set; } = default!;
 
-        public async Task OnGet()
+        public async Task OnGetAsync()
         {
-            if (_context.Categories != null)
-            {
+            //if (_context.Categories != null)
+            //{
                 Categories = await _context.Categories.ToListAsync();
-            }
+            //}
         }
     }
 }

@@ -12,9 +12,9 @@ namespace SupermarketWEB.Models
         public DateTime Date { get; set; }
 
         public int PaymodeId { get; set; }
-        public Paymode Paymode { get; set; }
+        public Paymode? Paymode { get; set; }
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        public Customer? Customer { get; set; }
         public ICollection<Detail>? Details { get; set; } = default;
     }
 }
